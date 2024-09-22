@@ -1,13 +1,14 @@
 import { useState, useId} from "react";
 
-export const Filters = (onChange)=>{
+export const Filters = ({changeFilters})=>{
     const [minPrice, setMinPrice] = useState(0);
     const minPriceFilterId = useId();
     const categoryFilterId = useId();
     
     const handleChangeMinPrice = (event)=>{
+       
         setMinPrice(event.target.value);
-        onChange((prevState) =>{
+        changeFilters((prevState) =>{
             return ({
                 ...prevState,
                 minPrice: event.target.value
@@ -16,7 +17,8 @@ export const Filters = (onChange)=>{
     };
 
     const handleChangeCategory = (event)=>{
-        onChange((prevState) =>({
+       
+            changeFilters((prevState) =>({
             ...prevState,
             category: event.target.value,
         }))

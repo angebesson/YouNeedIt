@@ -49,5 +49,4 @@ const filteredProducts = filterProducts(products)
     </>
   )
 }
-
 export default App
