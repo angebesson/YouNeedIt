@@ -18,5 +18,5 @@ const filterProducts = (products)=>{
        )
      })
 }
-return {filterProducts , setFilters}
+return {filters,filterProducts , setFilters}
 }
